@@ -10,6 +10,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import HeroSection from "@/components/hero";
+
 import {
   Accordion,
   AccordionContent,
@@ -25,6 +26,10 @@ import { howItWorks } from "@/data/howItWorks";
 export default function LandingPage() {
   return (
     <>
+  
+
+
+
       <div className="grid-background"></div>
 
       {/* Hero Section */}
