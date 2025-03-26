@@ -1,43 +1,37 @@
 "use client";
 
-// import React, { useEffect, useRef } from "react";
+// import React from "react";
 // import Image from "next/image";
 // import { Button } from "@/components/ui/button";
 // import Link from "next/link";
+// import { Rubik_Doodle_Shadow } from "next/font/google";
+// import ShinyText from "./Shiny";
+
+
+// const rubikDoodleShadow = Rubik_Doodle_Shadow({ subsets: ["latin"], weight: "400" });
 
 // const HeroSection = () => {
-//   const imageRef = useRef(null);
+  
 
-//   useEffect(() => {
-//     const imageElement = imageRef.current;
-
-//     const handleScroll = () => {
-//       const scrollPosition = window.scrollY;
-//       const scrollThreshold = 100;
-
-//       if (scrollPosition > scrollThreshold) {
-//         imageElement.classList.add("scrolled");
-//       } else {
-//         imageElement.classList.remove("scrolled");
-//       }
-//     };
-
-//     window.addEventListener("scroll", handleScroll);
-//     return () => window.removeEventListener("scroll", handleScroll);
-//   }, []);
 
 //   return (
 //     <section className="w-full pt-36 md:pt-48 pb-10">
 //       <div className="space-y-6 text-center">
 //         <div className="space-y-6 mx-auto">
-//           <h1 className="text-5xl font-bold md:text-6xl lg:text-7xl xl:text-8xl gradient-title animate-gradient">
-//             Your AI Career Coach for
+//           {/* <h1
+//             className={`text-5xl font-bold md:text-6xl lg:text-7xl xl:text-8xl gradient-title animate-gradient ${rubikDoodleShadow.className}`}
+//           >
+//             AI Driven Success,
 //             <br />
-//             Professional Success
-//           </h1>
-//           <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl">
-//             Advance your career with personalized guidance, interview prep, and
-//             AI-powered tools for job success.
+//             Tailored For You
+//           </h1> */}
+//             <ShinyText
+//             text="AI Driven Success, Tailored For You"
+//             speed={2}
+//             className={`text-5xl font-bold md:text-6xl lg:text-7xl xl:text-8xl ${rubikDoodleShadow.className}`}
+//           />
+//           <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl ">
+//           Unlock your potential with AI-driven career coaching, expert interview prep, and personalized job success strategies.
 //           </p>
 //         </div>
 //         <div className="flex justify-center space-x-4">
@@ -53,25 +47,24 @@
 //           </Link>
 //         </div>
 //         <div className="hero-image-wrapper mt-5 md:mt-0">
-//           <div ref={imageRef} className="hero-image">
-//             <Image
-//               src="/banner.jpeg"
-//               width={1280}
-//               height={720}
-//               alt="Dashboard Preview"
-//               className="rounded-lg shadow-2xl border mx-auto"
-//               priority
-//             />
-//           </div>
+//         <section className="h-[10vh]"></section>
+//         <section className="h-screen flex items-center justify-center">
+//   <Image
+//     src="/banner2.jpeg"
+//     width={1000}
+//     height={680}
+//     alt="Dashboard Preview"
+//     className="rounded-lg shadow-2xl border-2 border-white mx-auto"
+//     priority
+//   />
+// </section>
 //         </div>
 //       </div>
 //     </section>
 //   );
-// };
+// }
 
 // export default HeroSection;
-
-
 
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
@@ -130,11 +123,7 @@ const HeroSection = () => {
               Get Started
             </Button>
           </Link>
-          <Link href="https://www.github.com/rahulxrattan">
-            <Button size="lg" variant="outline" className="px-8">
-              Watch Demo
-            </Button>
-          </Link>
+         
         </div>
         <div className="hero-image-wrapper mt-5 md:mt-0">
           <div ref={imageRef} className="hero-image">
