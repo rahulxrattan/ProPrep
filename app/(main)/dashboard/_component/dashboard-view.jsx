@@ -37,18 +37,7 @@ const DashboardView = ({ insights }) => {
     median: range.median / 1000,
   }));
 
-  const getDemandLevelColor = (level) => {
-    switch (level.toLowerCase()) {
-      case "high":
-        return "bg-green-500";
-      case "medium":
-        return "bg-yellow-500";
-      case "low":
-        return "bg-red-500";
-      default:
-        return "bg-gray-500";
-    }
-  };
+  
 
   const getMarketOutlookInfo = (outlook) => {
     switch (outlook.toLowerCase()) {
@@ -75,9 +64,7 @@ const DashboardView = ({ insights }) => {
 
   return (
     <div className="space-y-6">
-      <div className="flex justify-between items-center">
-        <Badge variant="outline">Last updated: {lastUpdatedDate}</Badge>
-      </div>
+      
 
       {/* Market Overview Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -86,7 +73,7 @@ const DashboardView = ({ insights }) => {
             <CardTitle className="text-sm font-medium">
               Market Outlook
             </CardTitle>
-            <OutlookIcon className={`h-4 w-4 ${outlookColor}`} />
+           
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{insights.marketOutlook}</div>
@@ -95,41 +82,33 @@ const DashboardView = ({ insights }) => {
             </p>
           </CardContent>
         </Card>
-
+{/* // industry growth */}
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">
               Industry Growth
             </CardTitle>
-            <TrendingUp className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">
               {insights.growthRate.toFixed(1)}%
             </div>
-            <Progress value={insights.growthRate} className="mt-2" />
           </CardContent>
         </Card>
-
+{/* demand card */}
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Demand Level</CardTitle>
-            <BriefcaseIcon className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{insights.demandLevel}</div>
-            <div
-              className={`h-2 w-full rounded-full mt-2 ${getDemandLevelColor(
-                insights.demandLevel
-              )}`}
-            />
+            
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Top Skills</CardTitle>
-            <Brain className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="flex flex-wrap gap-1">

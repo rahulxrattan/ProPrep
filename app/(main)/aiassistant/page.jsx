@@ -47,7 +47,7 @@ export default function AIAssistant() {
           <CardTitle className="text-2xl font-semibold">How can i help you</CardTitle>
           <CardDescription>Ask your questions and get magical solutions.</CardDescription>
         </CardHeader>
-        <CardContent className="space-y-4">
+        <CardContent className="space-y-4 w-full max-w-2xl">
           <div className="space-y-2">
             <Input
               type="text"

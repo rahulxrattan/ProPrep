@@ -12,25 +12,8 @@ const rubikDoodleShadow = Rubik_Doodle_Shadow({ subsets: ["latin"], weight: "400
 
 const HeroSection = () => {
   const { isSignedIn } = useUser(); // Check if user is signed in
-  const imageRef = useRef(null);
+  
 
-  useEffect(() => {
-    const imageElement = imageRef.current;
-
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const scrollThreshold = 100;
-
-      if (scrollPosition > scrollThreshold) {
-        imageElement.classList.add("scrolled");
-      } else {
-        imageElement.classList.remove("scrolled");
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <section className="w-full pt-36 md:pt-48 pb-10">
@@ -55,14 +38,16 @@ const HeroSection = () => {
           {/* Show "Ask AI" button only for signed-in users */}
           {isSignedIn && (
             <Link href="/aiassistant">
-              <Button variant="outline" size="lg" className="px-8 border-white">
-                Ask AI
+              <Button variant="outline" size="lg" className="px-8 border-white space-x-4">
+                Ai Assistant
               </Button>
             </Link>
           )}
         </div>
-        <div className="hero-image-wrapper mt-5 md:mt-0">
-          <div ref={imageRef} className="hero-image">
+         
+        <div className="hero-image-wrapper mt-16 md:mt-0">
+          <span height="30"></span>
+          <div className="mt-20">
             <Image
               src="/banner2.jpeg"
               width={1000}

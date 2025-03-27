@@ -47,7 +47,7 @@ export default function QuizList({ assessments }) {
               <Card
                 key={assessment.id}
                 className="cursor-pointer hover:bg-muted/50 transition-colors"
-                onClick={() => setSelectedQuiz(assessment)}
+                
               >
                 <CardHeader>
                   <CardTitle className="gradient-title text-2xl">
@@ -55,18 +55,13 @@ export default function QuizList({ assessments }) {
                   </CardTitle>
                   <CardDescription className="flex justify-between w-full">
                     <div>Score: {assessment.quizScore.toFixed(1)}%</div>
-                    <div>
-                      {format(
-                        new Date(assessment.createdAt),
-                        "MMMM dd, yyyy HH:mm"
-                      )}
-                    </div>
+                    
                   </CardDescription>
                 </CardHeader>
-                {assessment.improvementTip && (
+                { (
                   <CardContent>
                     <p className="text-sm text-muted-foreground">
-                      {assessment.improvementTip}
+                      
                     </p>
                   </CardContent>
                 )}

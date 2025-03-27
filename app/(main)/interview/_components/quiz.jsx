@@ -150,15 +150,7 @@ export default function Quiz() {
         )}
       </CardContent>
       <CardFooter className="flex justify-between">
-        {!showExplanation && (
-          <Button
-            onClick={() => setShowExplanation(true)}
-            variant="outline"
-            disabled={!answers[currentQuestion]}
-          >
-            Show Explanation
-          </Button>
-        )}
+        
         <Button
           onClick={handleNext}
           disabled={!answers[currentQuestion] || savingResult}

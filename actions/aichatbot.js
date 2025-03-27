@@ -8,7 +8,7 @@ const genAI = new GoogleGenerativeAI(API_KEY);
 
 // Custom responses for Wavesetters-related queries
 const customResponses = [
-  { pattern: /wavesetters/i, response: "Wave Setters is a developer team currently participating in GNA Hackathon 3.0. They created Pro Prep, an app that helps users make resumes, give mock tests, and generate cover letters—all with AI assistance." },
+  { pattern: / is wavesetters/i, response: "Wave Setters is a developer team currently participating in GNA Hackathon 3.0. They created Pro Prep, an app that helps users make resumes, give mock tests, and generate cover letters—all with AI assistance." },
   { pattern: /do/i, response: "Wave Setters provides AI-driven industry insights and tools like AI Resume Maker, AI Cover Letter Generator, and mock tests tailored to users' preferences and technology expertise." },
   { pattern: /how to use /i, response: "Users need to sign up via Google or email, then enter their details such as specialization and experience. Based on this, they receive insights about salaries, job requirements, and access to AI-powered career growth tools." },
   { pattern: /features of proprep/i, response: "Proprep offers AI Resume Maker, AI Cover Letter Generator, personalized mock tests, and industry insights—all in one place." },

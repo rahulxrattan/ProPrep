@@ -6,7 +6,8 @@ import {
   FileText,
   GraduationCap,
   ChevronDown,
-  StarsIcon,
+  
+  BookOpen,
 } from "lucide-react";
 import Link from "next/link";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
@@ -44,7 +45,6 @@ export default async function Header() {
                 variant="outline"
                 className="hidden md:inline-flex items-center gap-2"
               >
-                <LayoutDashboard className="h-4 w-4" />
                 Industry Insights
               </Button>
               <Button variant="ghost" className="md:hidden w-10 h-10 p-0">
@@ -56,8 +56,7 @@ export default async function Header() {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button className="flex items-center gap-2">
-                  <StarsIcon className="h-4 w-4" />
-                  <span className="hidden md:block">Growth Tools</span>
+                  <span className="hidden md:block">AI Tools</span>
                   <ChevronDown className="h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
@@ -83,6 +82,24 @@ export default async function Header() {
                     Interview Prep
                   </Link>
                 </DropdownMenuItem>
+
+                <DropdownMenuItem asChild>
+                  <Link href="/resume" className="flex items-center gap-2">
+                    <FileText className="h-4 w-4" />
+                    Build Resume
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link
+                    href="/studyresource"
+                    className="flex items-center gap-2"
+                  >
+                    <BookOpen className="h-4 w-4" />
+                    Study Resources
+                  </Link>
+                </DropdownMenuItem>
+
+
               </DropdownMenuContent>
             </DropdownMenu>
           </SignedIn>
