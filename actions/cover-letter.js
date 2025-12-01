@@ -1,11 +1,14 @@
+
 "use server";
 
 import { db } from "@/lib/prisma";
 import { auth } from "@clerk/nextjs/server";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
+// *** Updated to the recommended stable model name ***
+const MODEL_NAME = "gemini-2.5-flash";
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+const model = genAI.getGenerativeModel({ model: MODEL_NAME });
 
 export async function generateCoverLetter(data) {
   const { userId } = await auth();

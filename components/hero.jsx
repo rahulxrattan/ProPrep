@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Rubik_Doodle_Shadow } from "next/font/google";
 import ShinyText from "./Shiny";
-import { useUser } from "@clerk/nextjs"; // Clerk's hook for client-side authentication
+import { useUser } from "@clerk/nextjs"; 
 
 const rubikDoodleShadow = Rubik_Doodle_Shadow({ subsets: ["latin"], weight: "400" });
 
@@ -29,7 +29,7 @@ const HeroSection = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []); // Check if user is signed in
+  }, []); 
   
 
 
@@ -37,14 +37,15 @@ const HeroSection = () => {
     <section className="w-full pt-36 md:pt-48 pb-10">
       <div className="space-y-6 text-center">
         <div className="space-y-6 mx-auto">
-          <ShinyText
-            text="AI Driven Success, Tailored For You"
-            speed={2}
-            className={`text-5xl font-bold md:text-6xl lg:text-7xl xl:text-8xl ${rubikDoodleShadow.className}`}
-          />
+          <h1 className="text-5xl font-bold md:text-6xl lg:text-7xl xl:text-8xl gradient-title animate-gradient">
+            Your AI Career Coach for
+            <br />
+            Professional Success
+          </h1>
           <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl">
             Unlock your potential with AI-driven career coaching, expert interview prep, and personalized job success strategies.
           </p>
+          
         </div>
         <div className="flex justify-center space-x-4">
           <Link href="/dashboard">

@@ -10,10 +10,11 @@ import { Badge } from '@/components/ui/badge';
 import { AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription, AlertDialogFooter, AlertDialogAction } from '@/components/ui/alert-dialog';
 import { Info, CheckCircle2, AlertCircle } from 'lucide-react';
 
-// Constants
-const MODEL_NAME = "gemini-1.5-flash";
+const MODEL_NAME = "gemini-2.5-flash"; 
 const API_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
-const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL_NAME}:generateContent`;
+
+
+const API_URL = `https://generativelanguage.googleapis.com/v1/models/${MODEL_NAME}:generateContent`; 
 
 export default function ResumeATSScanner() {
   const [resumeText, setResumeText] = useState('');
@@ -287,3 +288,5 @@ KEYWORD MATCHING: [text]`
     </>
   );
 }
+
+
